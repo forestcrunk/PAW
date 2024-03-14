@@ -30,7 +30,6 @@ namespace Curs4_WindowsForms
         private void Form1_Load(object sender, EventArgs e)
         {
             tbox_in.Text = elem.Element.ToString();
-            
         }
     }
 }

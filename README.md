@@ -25,3 +25,6 @@ exemplificare relatie 'has-a' , supraincarcare operator indexare
 
 ## Seminar 3 
 exemplificare diferente 'struct' vs. 'class' (tip valoric vs. tip referentiat), derivare clasa, supraincarcare + pentru adaugare in lista din clasa 'has-a'
+
+## Seminar 4
+creare aplicatie Windows Forms pentru rezolvarea ecuatiei de grad 2 din **Seminar 1**
