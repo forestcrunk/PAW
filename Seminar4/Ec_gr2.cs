@@ -15,6 +15,12 @@ namespace Seminar4
             delta = fdelta;
             mesaj = fmesaj + " Delta = " + delta;
         }
+        public new string Message => mesaj;
+    }
+
+    class NullCoefficientException : Exception
+    {
+        public NullCoefficientException(string fmesaj) : base(fmesaj) { }
     }
 
     internal class Ec_gr2
@@ -35,7 +41,7 @@ namespace Seminar4
             {
                 if (value == 0)
                 {
-                    throw new Exception("Coeficientul lui x^2 nu poate fi nul!");
+                    throw new NullCoefficientException("Coeficientul lui x^2 nu poate fi nul!");
                 }
                 else a = value;
             }

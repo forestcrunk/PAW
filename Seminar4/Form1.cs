@@ -31,17 +31,21 @@ namespace Seminar4
                 tb_out_rad1.Text = ec.radacina1.ToString();
                 tb_out_rad2.Text = ec.radacina2.ToString();
             }
-            catch(FormatException fex)
+            catch(FormatException fex) //int32.parse
             {
                 MessageBox.Show(fex.Message, "Eroare format", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch(DeltaException dex)
+            catch(DeltaException dex) //delta < 0
             {
                 MessageBox.Show(dex.Message, "Eroare delta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch(Exception ex)
+            catch (NullCoefficientException ncex) //a*x^2 , a=0
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ncex.Message, "Eroare coeficient x^2", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
