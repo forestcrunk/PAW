@@ -1,3 +1,9 @@
+# DESCARCARE FOLDER INDIVIDUAL
+- intrati pe https://download-directory.github.io
+- copiati link-ul catre unul din foldere din repo, de ex. https://github.com/forestcrunk/PAW/tree/main/Curs5
+- puneti link-ul la folder pe download-directory si descarcati zip-ul
+- creati un proiect nou si copiati codul din fisierele .cs
+
 **TODO: formatare mai buna pentru readme**
 
 # CURS
@@ -16,7 +22,7 @@ introducere Windows Forms
 
 ## Curs 5
 validari la nivel de textbox, utilizare event din CElement, exceptii + error messagebox, detectare de key press pentru Enter, istoric calcule
- prin textbox multiline, listbox, listview, datagridvies
+ prin: textbox multiline, listbox, listview, datagridview
 
 # SEMINAR
 
