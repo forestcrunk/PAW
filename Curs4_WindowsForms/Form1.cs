@@ -23,8 +23,12 @@ namespace Curs4_WindowsForms
         private void button1_Click(object sender, EventArgs e)
         {
             //MessageBox.Show($"Butonul {button1.Text} a fost apasat.");
-            elem.Element = Int32.Parse(tbox_in.Text);
-            tbox_out.Text = elem.ElementSq.ToString();
+
+            //metoda simpla
+            elem.Element = Int32.Parse(tbox_in.Text); //incarcam in element valoarea din textbox
+            tbox_out.Text = elem.ElementSq.ToString(); //afisam in textbox-ul de jos patratul
+
+            //in Curs5 este metoda 'mai buna,' folosing event-ul din CElement.cs 12,35
         }
 
         private void Form1_Load(object sender, EventArgs e)

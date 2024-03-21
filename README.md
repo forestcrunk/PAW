@@ -14,6 +14,9 @@ boxing si unboxing, exemplificare copiere prin referinta si clonare (interfata I
 ## Curs 4 
 introducere Windows Forms
 
+## Curs 5
+validari la nivel de textbox, utilizare event din CElement, exceptii + error messagebox, detectare de key press pentru Enter, istoric calcule
+ prin textbox multiline, listbox, listview, datagridvies
 
 # SEMINAR
 

@@ -38,7 +38,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(212, 126);
+            this.button1.Location = new System.Drawing.Point(216, 140);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 40);
             this.button1.TabIndex = 1;
@@ -48,7 +48,7 @@
             // 
             // tbox_in
             // 
-            this.tbox_in.Location = new System.Drawing.Point(212, 65);
+            this.tbox_in.Location = new System.Drawing.Point(216, 79);
             this.tbox_in.Name = "tbox_in";
             this.tbox_in.Size = new System.Drawing.Size(110, 20);
             this.tbox_in.TabIndex = 0;
@@ -56,7 +56,7 @@
             // 
             // tbox_out
             // 
-            this.tbox_out.Location = new System.Drawing.Point(212, 211);
+            this.tbox_out.Location = new System.Drawing.Point(216, 225);
             this.tbox_out.Name = "tbox_out";
             this.tbox_out.ReadOnly = true;
             this.tbox_out.Size = new System.Drawing.Size(110, 20);
