@@ -1,9 +1,9 @@
-**TODO: formatare mai buna pentru readme**
-
 # DESCARCARE FOLDER INDIVIDUAL
 - intrati pe https://download-directory.github.io
 - copiati link-ul catre unul din foldere din repo, de ex. https://github.com/forestcrunk/PAW/tree/main/Curs5
 - puneti link-ul la folder pe download-directory si descarcati zip-ul
+- dati unzip undeva si deschideti fisierul **.sln** (cel cu iconita asta daca nu aveti extensiile de fisier vizibile)
+![](https://i.imgur.com/9mwZ7kR.jpeg)
 
 # CURS
 
@@ -36,3 +36,6 @@ exemplificare diferente 'struct' vs. 'class' (tip valoric vs. tip referentiat), 
 
 ## Seminar 4
 creare aplicatie Windows Forms pentru rezolvarea ecuatiei de grad 2 din **Seminar 1** , creare exceptii custom
+
+## Seminar 5
+incepere creare aplicatie Windows Forms pentru gestionarea salariatilor din **Seminar 3**
