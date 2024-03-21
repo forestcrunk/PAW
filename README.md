@@ -1,10 +1,9 @@
+**TODO: formatare mai buna pentru readme**
+
 # DESCARCARE FOLDER INDIVIDUAL
 - intrati pe https://download-directory.github.io
 - copiati link-ul catre unul din foldere din repo, de ex. https://github.com/forestcrunk/PAW/tree/main/Curs5
 - puneti link-ul la folder pe download-directory si descarcati zip-ul
-- creati un proiect nou si copiati codul din fisierele .cs
-
-**TODO: formatare mai buna pentru readme**
 
 # CURS
 
