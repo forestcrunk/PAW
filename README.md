@@ -23,6 +23,9 @@ introducere Windows Forms
 validari la nivel de textbox, utilizare event din CElement, exceptii + error messagebox, detectare de key press pentru Enter, istoric calcule
  prin: textbox multiline, listbox, listview, datagridview
 
+## Curs 6
+incepere creare form pentru gestionare firma cu salariati, utilizand meniu, datagridview, evenimente, sincronizandu-le pe toate
+
 # SEMINAR
 
 ## Seminar 1 
