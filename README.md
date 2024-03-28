@@ -1,8 +1,8 @@
 # DESCARCARE FOLDER INDIVIDUAL
-- intrati pe https://download-directory.github.io
 - copiati link-ul catre unul din foldere din repo, de ex. https://github.com/forestcrunk/PAW/tree/main/Curs5
+- intrati pe https://download-directory.github.io
 - puneti link-ul la folder pe download-directory si descarcati zip-ul
-- dati unzip undeva si deschideti fisierul **.sln** (cel cu iconita asta daca nu aveti extensiile de fisier vizibile)
+- **DATI UNZIP** undeva si deschideti fisierul **.sln** (cel cu iconita asta daca nu aveti extensiile de fisier vizibile)
 ![](https://i.imgur.com/9mwZ7kR.jpeg)
 
 # CURS
@@ -42,3 +42,6 @@ creare aplicatie Windows Forms pentru rezolvarea ecuatiei de grad 2 din **Semina
 
 ## Seminar 5
 incepere creare aplicatie Windows Forms pentru gestionarea salariatilor din **Seminar 3**
+
+## Seminar 6
+continuare aplicatie din **Seminar 5** utilizand cunostintele dobandite in **Curs 6**
