@@ -24,6 +24,16 @@ namespace Seminar7
         private void Firma_event_modificare(object sender, EventArgs e)
         {
             Firma f = sender as Firma;
+            Firma_Ev_args fe = e as Firma_Ev_args;
+
+            if (f.Numar_salariati == 0)
+            {
+                modificaToolStripMenuItem.Enabled = stergeToolStripMenuItem.Enabled =  false;
+            }
+            else
+            {
+                modificaToolStripMenuItem.Enabled = stergeToolStripMenuItem.Enabled = true;
+            }
 
             dgv.Rows.Clear();
 
@@ -38,37 +48,54 @@ namespace Seminar7
                 dgv.Rows[i].HeaderCell.Value = (i + 1).ToString();
             }
 
-            dgv.Rows[f.Numar_salariati - 1].Selected = true;
+            dgv.Rows[fe.Index].Selected = true;
 
+            
             sb_label2.Text = f.Fond_salarii.ToString(); //am adaugat fondul de salarii in status label-ul de jos
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //if(firma.Numar_salariati == 0)
-            //{
-            //    modificaToolStripMenuItem.Enabled = false;
-            //}
+
         }
 
         private void adaugaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ToolStripMenuItem item = sender as ToolStripMenuItem;
+            int index = -1;
+            if (item.Tag.ToString() == "S")
+            {
+                if (firma.Numar_salariati > 0)
+                {
+                    if (DialogResult.Yes == MessageBox.Show(
+                        "Sunteti sigur ca doriti sa stergeti acest salariat?",
+                        "Stergere salariat",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question)
+                    )
+                    {
+                        int index1 = dgv.SelectedRows[0].Index;
+                        firma.stergeSalariat(index1);
+                    }
+                }
+                
+                return;//iesim din functie devreme
+            }
 
             Form2 dialog = new Form2();
             dialog.Text = item.Text + " salariat";
             dialog.button_confirma.Text = item.Text;
+            
 
             if(item.Tag.ToString() == "M")
             {
-                int index = dgv.SelectedRows[0].Index;
+                index = dgv.SelectedRows[0].Index;
 
                 dialog.tbox_no.Text = firma[index].Numar_ore.ToString();
                 dialog.tbox_so.Text = firma[index].Salariul_orar.ToString();
                 dialog.tbox_nume.Text = firma[index].Nume;
             }
 
-            
 
             if (DialogResult.OK == dialog.ShowDialog())
             {
@@ -79,6 +106,7 @@ namespace Seminar7
                     Numar_ore = int.Parse(dialog.tbox_no.Text),
                     Salariul_orar = float.Parse(dialog.tbox_so.Text)
                 };
+
                 if (item.Tag.ToString() == "A")
                 {
                     firma.adaugaSalariat(s);
@@ -87,10 +115,10 @@ namespace Seminar7
 
                 if(item.Tag.ToString() == "M")
                 {
-                    int index = dgv.SelectedRows[0].Index;
-
                     firma[index] = s;
                 }
+
+                
             }
         }
     }

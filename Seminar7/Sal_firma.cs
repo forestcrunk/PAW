@@ -77,6 +77,16 @@ namespace Seminar7
         }
     }
 
+    class Firma_Ev_args : EventArgs
+    {
+        int idx;
+        public Firma_Ev_args(int fidx)
+        {
+            idx = fidx;
+        }
+        public int Index => idx;
+    }
+
     class Firma
     {
         public event EventHandler event_modificare;
@@ -94,7 +104,26 @@ namespace Seminar7
             ls.Add(sal);
             if (event_modificare != null)
             {
-                event_modificare(this, null);
+                event_modificare(this, new Firma_Ev_args(ls.Count - 1));
+            }
+        }
+
+        public void stergeSalariat(int index)
+        {
+            if (Numar_salariati == 0)
+            {
+                throw new Exception("Nu exista salariati!");
+            }
+
+            ls.RemoveAt(index);
+            if(index == Numar_salariati && Numar_salariati != 0)
+            {
+                index--;
+            }
+            if (event_modificare != null)
+            {
+
+                event_modificare(this, new Firma_Ev_args(index));
             }
         }
 
@@ -118,7 +147,7 @@ namespace Seminar7
                     ls[k] = value;
                     if (event_modificare != null)
                     {
-                        event_modificare(this, null);
+                        event_modificare(this, new Firma_Ev_args(k));
                     }
                 }
             }
