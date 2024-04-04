@@ -23,7 +23,7 @@ namespace Seminar7
 
         private void Firma_event_modificare(object sender, EventArgs e)
         {
-            Firma f = (Firma)sender;
+            Firma f = sender as Firma;
 
             dgv.Rows.Clear();
 
@@ -68,15 +68,17 @@ namespace Seminar7
                 dialog.tbox_nume.Text = firma[index].Nume;
             }
 
-            Salariat s = new Salariat()
-            {
-                Nume = dialog.tbox_nume.Text,
-                Numar_ore = int.Parse(dialog.tbox_no.Text),
-                Salariul_orar = float.Parse(dialog.tbox_so.Text)
-            };
+            
 
             if (DialogResult.OK == dialog.ShowDialog())
             {
+
+                Salariat s = new Salariat()
+                {
+                    Nume = dialog.tbox_nume.Text,
+                    Numar_ore = int.Parse(dialog.tbox_no.Text),
+                    Salariul_orar = float.Parse(dialog.tbox_so.Text)
+                };
                 if (item.Tag.ToString() == "A")
                 {
                     firma.adaugaSalariat(s);

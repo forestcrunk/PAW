@@ -68,15 +68,16 @@ namespace Seminar6
                 dialog.tbox_nume.Text = firma[index].Nume;
             }
 
-            Salariat s = new Salariat()
-            {
-                Nume = dialog.tbox_nume.Text,
-                Numar_ore = int.Parse(dialog.tbox_no.Text),
-                Salariul_orar = float.Parse(dialog.tbox_so.Text)
-            };
+            
 
             if (DialogResult.OK == dialog.ShowDialog())
             {
+                Salariat s = new Salariat()
+                {
+                    Nume = dialog.tbox_nume.Text,
+                    Numar_ore = int.Parse(dialog.tbox_no.Text),
+                    Salariul_orar = float.Parse(dialog.tbox_so.Text)
+                };
                 if (item.Tag.ToString() == "A")
                 {
                     firma.adaugaSalariat(s);
