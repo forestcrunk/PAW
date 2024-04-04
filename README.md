@@ -26,6 +26,10 @@ validari la nivel de textbox, utilizare event din CElement, exceptii + error mes
 ## Curs 6
 incepere creare form pentru gestionare firma cu salariati, utilizand meniu, datagridview, evenimente, sincronizandu-le pe toate
 
+## Curs 7
+- implementare serializare si deserializare (fisiere binare)
+- rescrierea adaugarii si modificarii de salariati printr-un BindingSource (??) in Curs7_legare
+
 # SEMINAR
 
 ## Seminar 1 
