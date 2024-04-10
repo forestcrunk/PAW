@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deschideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,9 +51,14 @@
             this.sb = new System.Windows.Forms.StatusStrip();
             this.sb_label1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.sb_label2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.adaugareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stergereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.sb.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -80,14 +86,16 @@
             // deschideToolStripMenuItem
             // 
             this.deschideToolStripMenuItem.Name = "deschideToolStripMenuItem";
-            this.deschideToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.deschideToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deschideToolStripMenuItem.Text = "Deschide";
+            this.deschideToolStripMenuItem.Click += new System.EventHandler(this.deschideToolStripMenuItem_Click);
             // 
             // salveazaToolStripMenuItem
             // 
             this.salveazaToolStripMenuItem.Name = "salveazaToolStripMenuItem";
-            this.salveazaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.salveazaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salveazaToolStripMenuItem.Text = "Salveaza";
+            this.salveazaToolStripMenuItem.Click += new System.EventHandler(this.salveazaToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -97,8 +105,9 @@
             // iesireToolStripMenuItem
             // 
             this.iesireToolStripMenuItem.Name = "iesireToolStripMenuItem";
-            this.iesireToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.iesireToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.iesireToolStripMenuItem.Text = "Iesire";
+            this.iesireToolStripMenuItem.Click += new System.EventHandler(this.iesireToolStripMenuItem_Click);
             // 
             // opSalariatiToolStripMenuItem
             // 
@@ -113,7 +122,7 @@
             // adaugaToolStripMenuItem
             // 
             this.adaugaToolStripMenuItem.Name = "adaugaToolStripMenuItem";
-            this.adaugaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.adaugaToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.adaugaToolStripMenuItem.Tag = "A";
             this.adaugaToolStripMenuItem.Text = "Adauga";
             this.adaugaToolStripMenuItem.Click += new System.EventHandler(this.adaugaToolStripMenuItem_Click);
@@ -122,7 +131,7 @@
             // 
             this.modificaToolStripMenuItem.Enabled = false;
             this.modificaToolStripMenuItem.Name = "modificaToolStripMenuItem";
-            this.modificaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificaToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.modificaToolStripMenuItem.Tag = "M";
             this.modificaToolStripMenuItem.Text = "Modifica";
             this.modificaToolStripMenuItem.Click += new System.EventHandler(this.adaugaToolStripMenuItem_Click);
@@ -131,7 +140,7 @@
             // 
             this.stergeToolStripMenuItem.Enabled = false;
             this.stergeToolStripMenuItem.Name = "stergeToolStripMenuItem";
-            this.stergeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stergeToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.stergeToolStripMenuItem.Tag = "S";
             this.stergeToolStripMenuItem.Text = "Sterge";
             this.stergeToolStripMenuItem.Click += new System.EventHandler(this.adaugaToolStripMenuItem_Click);
@@ -140,14 +149,14 @@
             // 
             this.dgv.AllowUserToAddRows = false;
             this.dgv.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgv_nume,
@@ -172,24 +181,24 @@
             // 
             // dgv_no
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgv_no.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgv_no.DefaultCellStyle = dataGridViewCellStyle22;
             this.dgv_no.HeaderText = "Numar de ore";
             this.dgv_no.Name = "dgv_no";
             this.dgv_no.ReadOnly = true;
             // 
             // dgv_so
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgv_so.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgv_so.DefaultCellStyle = dataGridViewCellStyle23;
             this.dgv_so.HeaderText = "Salariu orar";
             this.dgv_so.Name = "dgv_so";
             this.dgv_so.ReadOnly = true;
             // 
             // dgv_salariu
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgv_salariu.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgv_salariu.DefaultCellStyle = dataGridViewCellStyle24;
             this.dgv_salariu.HeaderText = "Salariu";
             this.dgv_salariu.Name = "dgv_salariu";
             this.dgv_salariu.ReadOnly = true;
@@ -217,11 +226,45 @@
             this.sb_label2.Size = new System.Drawing.Size(13, 17);
             this.sb_label2.Text = "0";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adaugareToolStripMenuItem,
+            this.modificareToolStripMenuItem,
+            this.stergereToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(132, 70);
+            // 
+            // adaugareToolStripMenuItem
+            // 
+            this.adaugareToolStripMenuItem.Name = "adaugareToolStripMenuItem";
+            this.adaugareToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.adaugareToolStripMenuItem.Tag = "A";
+            this.adaugareToolStripMenuItem.Text = "Adaugare";
+            this.adaugareToolStripMenuItem.Click += new System.EventHandler(this.adaugaToolStripMenuItem_Click);
+            // 
+            // modificareToolStripMenuItem
+            // 
+            this.modificareToolStripMenuItem.Name = "modificareToolStripMenuItem";
+            this.modificareToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificareToolStripMenuItem.Tag = "M";
+            this.modificareToolStripMenuItem.Text = "Modificare";
+            this.modificareToolStripMenuItem.Click += new System.EventHandler(this.adaugaToolStripMenuItem_Click);
+            // 
+            // stergereToolStripMenuItem
+            // 
+            this.stergereToolStripMenuItem.Name = "stergereToolStripMenuItem";
+            this.stergereToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stergereToolStripMenuItem.Tag = "S";
+            this.stergereToolStripMenuItem.Text = "Stergere";
+            this.stergereToolStripMenuItem.Click += new System.EventHandler(this.adaugaToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(567, 313);
+            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.sb);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.menuStrip1);
@@ -234,6 +277,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.sb.ResumeLayout(false);
             this.sb.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,6 +303,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_salariu;
         public System.Windows.Forms.ToolStripStatusLabel sb_label1;
         public System.Windows.Forms.ToolStripStatusLabel sb_label2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem adaugareToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificareToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stergereToolStripMenuItem;
     }
 }
 

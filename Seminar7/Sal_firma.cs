@@ -1,13 +1,17 @@
 ﻿using System;
 using System.CodeDom;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Seminar7
 {
+    [Serializable]
     class Salariat : ICloneable
     {
         string nume;
@@ -115,6 +119,12 @@ namespace Seminar7
                 throw new Exception("Nu exista salariati!");
             }
 
+            if (index < 0 || index >= Numar_salariati)
+            {
+                throw new IndexOutOfRangeException("Numar de salariati invalid!");
+            }
+
+
             ls.RemoveAt(index);
             if(index == Numar_salariati && Numar_salariati != 0)
             {
@@ -163,5 +173,26 @@ namespace Seminar7
         }
 
         public List<Salariat> Salariati => ls;
+
+        public void Serializare(string nf)
+        {
+            FileStream fs = new FileStream(nf, FileMode.Create);
+            BinaryFormatter bf = new BinaryFormatter();
+            bf.Serialize(fs, ls);
+            fs.Close();
+        }
+
+        public void Deserializare(string nf)
+        {
+            FileStream fs = new FileStream(nf, FileMode.Open);
+            BinaryFormatter bf = new BinaryFormatter();
+            ls = bf.Deserialize(fs) as List<Salariat>;
+            fs.Close();
+            if (event_modificare != null)
+            {
+                event_modificare(this, new Firma_Ev_args(ls.Count - 1));
+            }
+
+        }
     }
 }

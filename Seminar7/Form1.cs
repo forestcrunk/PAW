@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace Seminar7
 {
@@ -48,9 +50,19 @@ namespace Seminar7
                 dgv.Rows[i].HeaderCell.Value = (i + 1).ToString();
             }
 
-            dgv.Rows[fe.Index].Selected = true;
+            //pentru a opri eroarea cand stergem ultimul salariat
+            //ea apare daca incercam sa selectam un row in gridview
+            //cand nu exista niciun rand
+            if (f.Numar_salariati > 0)
+            {
+                dgv.Rows[fe.Index].Selected = true;
+            }
+            else
+            {
+                //nothing
+            }
 
-            
+
             sb_label2.Text = f.Fond_salarii.ToString(); //am adaugat fondul de salarii in status label-ul de jos
         }
 
@@ -120,6 +132,50 @@ namespace Seminar7
 
                 
             }
+        }
+
+        private void deschideToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fd = new OpenFileDialog();
+
+            //intram in folder-ul proiectului
+            //trebuie folosit Path.Combine deoarece GetCurrentDirectory
+            //ne-ar duce in Seminar7\bin\Debug deoarece acolo se afla
+            //fisierul .exe
+            //
+            //"..\.." va merge cu doua foldere in spate
+            string path = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "..\\..");
+            fd.InitialDirectory = System.IO.Path.GetFullPath(path);
+            //fd.InitialDirectory = @""; //se duce in C:\Users\<nume>\Documents
+
+            fd.Filter = "Date |*.dat|Toate fisierele|*.*";
+            fd.FilterIndex = 1;
+            fd.Multiselect = false;
+            if (DialogResult.OK == fd.ShowDialog())
+            {
+                firma.Deserializare(fd.FileName);
+            }
+        }
+
+        private void salveazaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog fd = new SaveFileDialog();
+
+            string path = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "..\\..");
+            fd.InitialDirectory = System.IO.Path.GetFullPath(path);
+            //fd.InitialDirectory = @""; //in Documents
+
+            fd.Filter = "Date |*.dat|Toate fisierele|*.*";
+            fd.FilterIndex = 1;
+            if (DialogResult.OK == fd.ShowDialog())
+            {
+                firma.Serializare(fd.FileName);
+            }
+        }
+
+        private void iesireToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
